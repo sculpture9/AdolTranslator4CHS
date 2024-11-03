@@ -91,10 +91,14 @@ namespace AdolTranslator.Text.Dat
                 if (Map.ContainsKey(utf))
                 {
                     var utfChar = Encoding.UTF32.GetString(BitConverter.GetBytes(int.Parse(utf)));
-                    Console.WriteLine($"the key: \"{utfChar}\", unicode: {utf} is already exists! Now override!");
-                    Map.Remove(utf);
-                    Map.Add(utf, sjis);
+                    Console.WriteLine($"the key: \"{utfChar}\", unicode: {utf} is already exists! Will no replace.");
                     continue;
+                }
+                //ascii key can not convert.
+                var utfCode = int.Parse(splitted[0]);
+                if (utfCode >= 0 && utfCode <= 127)
+                {
+                    sjis = utf;
                 }
                 Map.Add(utf, sjis);
             }
