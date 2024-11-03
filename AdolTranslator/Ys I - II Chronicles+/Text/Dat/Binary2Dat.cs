@@ -10,9 +10,6 @@ namespace AdolTranslator.Text.Dat
         private Dat dat;
         private DataReader reader;
         public static Encoding Sjis = Encoding.GetEncoding("shift_jis");
-        public static Encoding UTF32 = Encoding.GetEncoding("utf-32");
-        public static Encoding UTF8 = Encoding.GetEncoding("utf-8");
-        public static Encoding Big5 = Encoding.GetEncoding("Big5");
 
         public Dat Convert(BinaryFormat source)
         {

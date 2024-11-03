@@ -21,7 +21,7 @@ namespace AdolTranslator
                               "Thanks to Twn for ASM Hacks and explanations.\n" +
                               "Thanks to Kaplas for waku0 swizzling and C to C# code port.\n" +
                               "Thanks to Pleonex for Yarhl libraries.");
-
+            args[0] = "E:\\Project\\YSTranslationProject\\YS CHS\\text\\SCENA.po";
             if (args.Length > 3 || args.Length == 0)
             {
                 Console.WriteLine("Usage: AdolTranslator File.Extension");
@@ -89,7 +89,7 @@ namespace AdolTranslator
 
                     break;
             }
-            
+            Console.ReadKey();
         }
     }
 }
